@@ -22,6 +22,16 @@ public class UserRepr {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "UserRepr{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", matchingPassword='" + matchingPassword + '\'' +
+                '}';
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
