@@ -32,7 +32,8 @@ public class LoginController {
 
     @PostMapping("/register")
     public String registerNewUser(@ModelAttribute("user") @Valid UserRepr userRepr){
-        return "register";
+        logger.info("New user" , userRepr);
+        return "redirect:/login";
     }
 
 
