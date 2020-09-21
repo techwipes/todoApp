@@ -42,9 +42,9 @@ public class LoginController {
     }
 
     @PostMapping("/register")
-    public String registerNewUser(@ModelAttribute("user")
-                                      @Valid UserRepr userRepr, BindingResult result){
+    public String registerNewUser(@ModelAttribute("user") @Valid UserRepr userRepr, BindingResult result){
         logger.info("New user {}" , userRepr);
+
         if(result.hasErrors()){
             return "register";
         }
